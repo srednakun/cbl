@@ -1,25 +1,22 @@
-<section class="addAdmin-view" data-ng-init="adminFunction()">
-
-  <h1>Add Score to Game: </h1>
+<section class="addAdmin-view" data-ng-init="getUsers()">
+  <h1>Add or Remove an Admin: </h1>
     <table>
       <thead>
         <tr>
-          <td>Home Team:</td>
-          <td>Score:</td>
-          <td>Away Team:</td>
-          <td>Score:</td>
-          <td>Game Date:</td>
+          <td>User Email:</td>
+          <td>Role:</td>
+          <td></td>
           <td></td>
         </tr>
      </thead>
-        <tr data-ng-repeat="game in scoreArray | orderBy: '+date'">
-          <td>{{game.teams[0].name}}</td>
-          <td><input data-ng-model="game.newscore1"></input></td>
-          <td>{{game.teams[1].name}}</td>
-          <td><input data-ng-model="game.newscore2"></input></td>
-          <td>{{game.date | date: 'dd-MM-yyyy'}}</td>
+        <tr data-ng-repeat="user in userArray | orderBy: '+email'">
+          <td data-ng-if="true">{{user.email}}</td>
+          <td data-ng-if="true">{{user.role}}</td>
           <td>
-            <button data-ng-click="addScore(game)">Post</button>
+            <button data-ng-click="addAdminRole(user)" class="submit-btn">Add Admin Role</button>
+          </td>
+          <td>
+            <button data-ng-click="removeAdminRole(user)" class="submit-btn">Remove Admin Role</button>
           </td>
         </tr>
     </table>

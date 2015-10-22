@@ -9,7 +9,7 @@ var isAdmin = require(__dirname + '/../lib/eat_authorize');
 
 
 var userRouter = module.exports = express.Router();
- 
+
 userRouter.post('/signup', jsonParser, function(req, res) {
   var newUser = new User();
   newUser.email = req.body.email;
@@ -33,12 +33,19 @@ userRouter.put('/update', jsonParser, isUser, function(req, res) {
   eventEmitter.emit('updateUser', req, res);
 });
 
-userRouter.post('/addadmin', jsonParser, isAdmin, function(req, res) {
+userRouter.post('/getusersfromdb', jsonParser, isAdmin, function(req,res){
+  Team.find({user: req.body.email}, function(err, users){
+    if(err) return handleError(err, res);
+    res.json(users);
+  });
+});
+
+userRouter.put('/addadmin', jsonParser, isAdmin, function(req, res) {
   //This route receives JSON with email field of user where we want to add admin role
   eventEmitter.emit('addAdminRole', req, res);
 });
 
-userRouter.put('/addadmin', jsonParser, isAdmin, function(req, res) {
+userRouter.delete('/removeadmin', jsonParser, isAdmin, function(req, res) {
   //This route receives JSON with email field of user where we want to remove admin role
   eventEmitter.emit('removeAdminRole', req, res);
 });
