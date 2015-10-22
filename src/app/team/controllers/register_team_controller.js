@@ -40,7 +40,7 @@ module.exports = function(app) {
       }).then(function(res) {
         $scope.teams[res.data._id] = res.data;
         $scope.clearTeamForm();
-        alertService.add('success', 'You Just Added The Team');
+        alertService.add('success', 'You Added The Team');
       }, function(res) {
         console.log(res);
       });
@@ -109,6 +109,7 @@ module.exports = function(app) {
         }).then(function(res) {
           $scope.teamFormatting = false;
           $scope.clearTeamForm();
+          alertService.add('success', 'You Updated The Team');
         }, function(res) {
           console.log(res);
         });
@@ -128,6 +129,7 @@ module.exports = function(app) {
         }).then(function(res) {
           $scope.playerFormatting = false;
           $scope.player = {};
+          alertService.add('success', 'You Updated The Player');
         }, function(res) {
           console.log(res);
         });

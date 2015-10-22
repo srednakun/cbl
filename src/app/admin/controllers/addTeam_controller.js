@@ -1,5 +1,5 @@
 module.exports = function(app){
-  app.controller('AddTeamController', ['$scope', '$http', '$cookies', function($scope, $http, $cookies){
+  app.controller('AddTeamController', ['$scope', '$http', '$cookies', 'alertService', function($scope, $http, $cookies, alertService){
 
   $http.defaults.headers.common.token = $cookies.get('token');
 
@@ -29,7 +29,7 @@ module.exports = function(app){
       }
     }).then(function(res){
       $scope.changeInSeason(team);
-      console.log('response is: ' + res.data);
+       alertService.add('success', 'You Added Team To Season');
     }, function(res){
       console.log('AddTeamController add2season error ' + res);
     });

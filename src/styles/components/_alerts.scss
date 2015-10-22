@@ -12,3 +12,14 @@
     padding-top: 0.5em;
     padding-bottom: 0.5em;
 }
+.sorry-popup {
+    @extend %main-button;
+    background-color: #DB2929;
+    border: .5em solid #DB2929;
+}
+.success-popup {
+    @extend %main-button;
+    background-color: $highlight;
+    border: .5em solid $highlight;
+}
+   

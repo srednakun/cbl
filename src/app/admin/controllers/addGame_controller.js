@@ -1,5 +1,5 @@
 module.exports = function(app){
-  app.controller('AddGameController', ['$scope', '$http', '$cookies', function($scope, $http, $cookies){
+  app.controller('AddGameController', ['$scope', '$http', '$cookies', 'alertService', function($scope, $http, $cookies, alertService){
 
   $scope.divATeams = [];
   $scope.divBTeams = [];
@@ -42,6 +42,7 @@ module.exports = function(app){
         data: $scope.data
       }).then(function(res){
         $scope.data = {};
+        alertService.add('success', 'You Added The Game');
       }, function(res){
         console.log('AddGameController addGame error ' + res);
     });
