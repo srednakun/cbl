@@ -1,5 +1,5 @@
 module.exports = function(app){
-  app.controller('AddScoreController', ['$scope', '$http', '$cookies', function($scope, $http, $cookies){
+  app.controller('AddScoreController', ['$scope', '$http', '$cookies', 'alertService', function($scope, $http, $cookies, alertService){
 
     $scope.scoreArray = [];
     var season = {};
@@ -38,10 +38,11 @@ module.exports = function(app){
             seasonNumber: $scope.currentSeason.seasonNumber
           }
         }).then(function(res){
-           console.log(res);
-           // removes addScore game from scoreArray
-           $scope.scoreArray.splice($scope.scoreArray.indexOf(game), 1);
-           $scope.data = {};
+          console.log(res);
+          // removes addScore game from scoreArray (Array of games with no score)
+          $scope.scoreArray.splice($scope.scoreArray.indexOf(game), 1);
+          $scope.data = {};
+          alertService.add('success', 'You Added Score To Game');
         }, function(res){
           console.log('AddScoreController addScore error ' + res);
       });

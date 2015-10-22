@@ -1,5 +1,5 @@
 module.exports = function(app){
-  app.controller('AddSeasonController', ['$scope', '$http', '$cookies', function($scope, $http, $cookies){
+  app.controller('AddSeasonController', ['$scope', '$http', '$cookies', 'alertService', function($scope, $http, $cookies, alertService){
 
     $scope.createSeasonForm = {
       'seasonNumber': '',
@@ -32,6 +32,7 @@ module.exports = function(app){
          console.log(res);
          $scope.season = {};
          $scope.changeCurrentSeason();
+         alertService.add('success', 'You Added The Season');
       }, function(res){
         console.log('AddSeasonController create error ' + res);
       });
