@@ -10,6 +10,7 @@ module.exports = function(app) {
         data: $scope.user
       }).then(function(res){
         console.log(res);
+        $scope.user = {};
       }, function(res){
         console.log('AddAdminController updateRole error ' + res);
       });
@@ -22,6 +23,7 @@ module.exports = function(app) {
         data: $scope.user
       }).then(function(res){
         console.log(res);
+        $scope.user = {};
       }, function(res){
         console.log('AddAdminController remove error ' + res);
       });
