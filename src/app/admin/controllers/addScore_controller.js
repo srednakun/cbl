@@ -39,7 +39,7 @@ module.exports = function(app){
           }
         }).then(function(res){
            console.log(res);
-           // removes addScore game from scoreArray (Array of games with no score)
+           // removes addScore game from scoreArray
            $scope.scoreArray.splice($scope.scoreArray.indexOf(game), 1);
            $scope.data = {};
         }, function(res){
