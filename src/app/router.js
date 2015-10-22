@@ -11,6 +11,11 @@ module.exports = function(app) {
         url: '/admin',
         templateUrl: '/html/views/admin/admin_view.html'
       })
+      .state('admin.addAdmin', {
+        url: '/admin/addAdmin',
+        templateUrl: '/html/views/admin/addAdmin/addAdmin_view.html',
+        controller: 'AddAdminController'
+      })
       .state('admin.addSeason', {
         url: '/admin/addseason',
         templateUrl: '/html/views/admin/addSeason/addSeason_view.html',

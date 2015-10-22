@@ -1,23 +1,12 @@
-<section class="addAdmin-view" data-ng-init="getUsers()">
+<section class="addAdmin-view">
   <h1>Add or Remove an Admin: </h1>
-    <table>
-      <thead>
-        <tr>
-          <td>User Email:</td>
-          <td>Role:</td>
-          <td></td>
-          <td></td>
-        </tr>
-     </thead>
-        <tr data-ng-repeat="user in userArray | orderBy: '+email'">
-          <td data-ng-if="true">{{user.email}}</td>
-          <td data-ng-if="true">{{user.role}}</td>
-          <td>
-            <button data-ng-click="addAdminRole(user)" class="submit-btn">Add Admin Role</button>
-          </td>
-          <td>
-            <button data-ng-click="removeAdminRole(user)" class="submit-btn">Remove Admin Role</button>
-          </td>
-        </tr>
-    </table>
+    <form name="updateAdminRole" role="form">
+        <p>Enter Email<input type="email"
+                          data-ng-model="user.email"
+                          placeholder="email@email.com"
+                          value=""
+                          required></p>
+        <button data-ng-click="addAdminRole(user)" class="submit-btn">Add Admin Role</button>
+        <button data-ng-click="removeAdminRole(user)" class="submit-btn">Remove Admin Role</button>
+    </form>
 </section>

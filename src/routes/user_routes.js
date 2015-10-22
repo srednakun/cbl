@@ -33,19 +33,12 @@ userRouter.put('/update', jsonParser, isUser, function(req, res) {
   eventEmitter.emit('updateUser', req, res);
 });
 
-userRouter.post('/getusersfromdb', jsonParser, isAdmin, function(req,res){
-  Team.find({user: req.body.email}, function(err, users){
-    if(err) return handleError(err, res);
-    res.json(users);
-  });
-});
-
 userRouter.put('/addadmin', jsonParser, isAdmin, function(req, res) {
   //This route receives JSON with email field of user where we want to add admin role
   eventEmitter.emit('addAdminRole', req, res);
 });
 
-userRouter.delete('/removeadmin', jsonParser, isAdmin, function(req, res) {
+userRouter.put('/removeadmin', jsonParser, isAdmin, function(req, res) {
   //This route receives JSON with email field of user where we want to remove admin role
   eventEmitter.emit('removeAdminRole', req, res);
 });
