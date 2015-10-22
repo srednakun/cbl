@@ -5,7 +5,6 @@ var Season = require(__dirname + '/../models/season');
 var handleError = require(__dirname + '/handleError');
 
 ee.on('verifyTeam', function(req, res, err){
-  
   Team.findOne({_id:req.team1obj._id}, function(err, team1){
     Team.findOne({_id:req.team2obj._id}, function(err, team2){
       if(team1 && team2) ee.emit('updateSeason', team1, team2, req, res, err); 
@@ -21,6 +20,7 @@ ee.on('updateSeason', function(team1, team2, req, res, err){
   var newGame = {
     date: req.body.date,
     location: req.body.location,
+    division: team1.division,
     teams: teamArray
   };
   Season.update({_id: req.body.seasonId},
