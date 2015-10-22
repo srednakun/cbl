@@ -59,8 +59,10 @@
 	border: em(2) solid $btn-hover-light;
 	border-radius: em(25);
 	padding: 3em 3em 3em 3em;
-	width: 20em;
+	min-width: 15em;
 	display: inline;
+	margin-bottom: 2em;
+	margin-right: 2em;
 
 	label {
 		font-size: em(24);
@@ -74,15 +76,11 @@
 .rt-page-section {
 
 	ul {
-		//overflow: hidden;
 		@extend %flex-box;
 		justify-content: flex-start;
 		
 		li {
-			//list-style-type: none;
 			display: inline;
-			height: 10em;
-			padding-right: 2em;
 
 		}
 	}
