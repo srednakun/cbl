@@ -1,0 +1,12 @@
+<section class="addAdmin-view">
+  <h1>Add or Remove an Admin: </h1>
+    <form name="updateAdminRole" role="form">
+        <p>Enter Email<input type="email"
+                          data-ng-model="user.email"
+                          placeholder="email@email.com"
+                          value=""
+                          required></p>
+        <button data-ng-click="addAdminRole(user)" class="submit-btn">Add Admin Role</button>
+        <button data-ng-click="removeAdminRole(user)" class="submit-btn">Remove Admin Role</button>
+    </form>
+</section>
