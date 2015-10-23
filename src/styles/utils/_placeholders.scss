@@ -47,3 +47,11 @@
   align-items: center;
 
 }
+
+%partials-default-form {
+	background-color: white;
+	padding: 2.5em 3em 2.5em 3em;
+	border: em(2) solid $btn-hover-light;
+    border-radius: em(25);
+
+}

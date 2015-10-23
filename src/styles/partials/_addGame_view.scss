@@ -1,20 +1,22 @@
 .addGame-view{
+  @extend %partials-default-form;
   @extend %flex-form;
+  margin-bottom: 3em;
   text-align: center;
   .radioSection{
     @extend %flex-box;
-  	input{
+    input{
       margin-right: 0.5em;
       @media screen and (max-width: 1024px) {
         margin: 0em;
       }
     }
     p{
-  	  margin-right: 1em;
+      margin-right: 1em;
       @media screen and (max-width: 1024px) {
         margin: 0em;
       }
-  	}
+    }
   }
 
   .submit-btn{
@@ -37,7 +39,6 @@
       margin-top: 0.5em;
       margin-bottom: 0.5em;
       display: inline;
-      background-color: $main-bk-color;
       border-top: 0;
       border-left: 0;
       border-right: 0;
