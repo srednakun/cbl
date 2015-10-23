@@ -4,11 +4,6 @@
   color: $primary-font-color;
   text-shadow: 1px 1px 1px #CCCCCC;
 
-  .contact-content{
-    margin-bottom: 3em;
-    @extend %partials-default-form;
-    text-align: center;
-  }
 
   .submit-btn{
       margin-right: auto;
@@ -30,13 +25,12 @@
       margin-top: 0.5em;
       margin-bottom: 0.5em;
       display: block;
+      background-color: $main-bk-color;
       border-top: 0;
       border-left: 0;
       border-right: 0;
       border-bottom: 1;
       border-bottom-color: $btn-color;
-      margin-right: auto;
-      margin-left: auto;
     }
 
     p{
@@ -47,7 +41,6 @@
       text-shadow: 1px 1px 1px #CCCCCC;
     }
     img{
-      border: 2px solid $btn-color;
       margin-top: 1em;
       margin-bottom: 4em;
       @media screen and (max-width: 50em) {

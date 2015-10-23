@@ -1,14 +1,7 @@
 .calendar-view{
   @extend %flex-form;
   text-align: center;
-
-  .calendar-content{
-    margin-bottom: 3em;
-    @extend %partials-default-form;
-  }
-
   .radioSection{
-    @extend %partials-default-form;
     @extend %flex-box;
   	input{
       margin-right: 0.5em;
