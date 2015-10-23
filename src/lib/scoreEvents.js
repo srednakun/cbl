@@ -28,7 +28,8 @@ scoreEventEmitter.on('addScoreToGames', function(req, res) {
 scoreEventEmitter.on('addScoreToTeam', function(req, res) {
   var winner = {};
   var loser = {};
-  if (req.body.id1Score > req.body.id2Score) {
+  debugger;
+  if (Number(req.body.id1Score) > Number(req.body.id2Score)) {
     winner.id = req.body.id1;
     winner.scored = req.body.id1Score;
     winner.allowed = req.body.id2Score;
@@ -43,10 +44,12 @@ scoreEventEmitter.on('addScoreToTeam', function(req, res) {
     loser.scored = req.body.id1Score;
     loser.allowed = req.body.id2Score;
   }
+
   scoreEventEmitter.emit('updateWinner', winner, loser, req, res);
 });
 
 scoreEventEmitter.on('updateWinner', function(winner, loser, req, res) {
+  debugger;
   Season.update({seasonNumber: req.body.seasonNumber, 'teams.team': winner.id}, {$inc: {'teams.$.win': 1, 'teams.$.played': 1,
   'teams.$.baskets.scored': winner.scored, 'teams.$.baskets.allowed': winner.allowed, 'teams.$.points': 2}}, function(err) {
     if (err) return handleError.standard(err, res);
