@@ -1,6 +1,6 @@
 module.exports = function(app) {
   app.config(function($stateProvider, $urlRouterProvider) {
-    $urlRouterProvider.otherwise('home');
+    $urlRouterProvider.otherwise('/');
 
     $stateProvider
       .state('home', {
