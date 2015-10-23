@@ -68,6 +68,12 @@
   -ms-flex-align: center;
   align-items: center; }
 
+.addGame-view, .addScore-view, .addSeason-view form, .addTeam-view, .changeTable-view, .signup-view form, .signin-view form, .calendar-view .calendar-content, .calendar-view .radioSection, .contact-view .contact-content, .addAdmin-view {
+  background-color: white;
+  padding: 2.5em 3em 2.5em 3em;
+  border: 0.125em solid #42a5f5;
+  border-radius: 1.5625em; }
+
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
 /**
  * 1. Set default font family to sans-serif.
@@ -869,6 +875,7 @@ input {
   border: 0.5em solid #9aca40; }
 
 .addGame-view {
+  margin-bottom: 3em;
   text-align: center; }
   .addGame-view .radioSection input {
     margin-right: 0.5em; }
@@ -895,7 +902,6 @@ input {
     margin-top: 0.5em;
     margin-bottom: 0.5em;
     display: inline;
-    background-color: #dee5e8;
     border-top: 0;
     border-left: 0;
     border-right: 0;
@@ -913,53 +919,48 @@ input {
   .addGame-view div {
     margin-top: 2em; }
 
-.addScore-view .submit-btn {
-  margin-top: 2em;
-  background-color: #9aca40;
-  font-size: 1.5em; }
-
-.addScore-view .submit-btn:hover {
-  background-color: #85b231;
-  border-color: #85b231; }
-
-.addScore-view input {
-  margin-top: 0.5em;
-  margin-bottom: 0.5em;
-  display: block;
-  background-color: #dee5e8;
-  border-top: 0;
-  border-left: 0;
-  border-right: 0;
-  border-bottom: 1;
-  border-bottom-color: #0d47a1; }
-
-.addScore-view p {
-  text-decoration: none;
-  font-size: 1.75em;
-  font-family: Roboto-bold;
-  color: #0d47a1;
-  text-shadow: 1px 1px 1px #CCCCCC; }
-
-.addScore-view h1 {
-  text-decoration: none;
-  font-size: 1.75em;
-  font-family: Roboto-bold;
-  color: #0d47a1;
-  text-shadow: 1px 1px 1px #CCCCCC; }
-
-.addScore-view td {
-  text-decoration: none;
-  font-size: 1em;
-  font-family: Roboto-bold;
-  color: #0d47a1;
-  text-shadow: 1px 1px 1px #CCCCCC;
-  padding-left: 0.5em;
-  padding-right: 0.5em; }
-
-.addScore-view div {
-  margin-bottom: 1em; }
-  .addScore-view div p {
-    margin-right: 0.5em; }
+.addScore-view {
+  margin-bottom: 3em; }
+  .addScore-view .submit-btn {
+    margin-top: 2em;
+    background-color: #9aca40;
+    font-size: 1.5em; }
+  .addScore-view .submit-btn:hover {
+    background-color: #85b231;
+    border-color: #85b231; }
+  .addScore-view input {
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    display: block;
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    border-bottom: 1;
+    border-bottom-color: #0d47a1; }
+  .addScore-view p {
+    text-decoration: none;
+    font-size: 1.75em;
+    font-family: Roboto-bold;
+    color: #0d47a1;
+    text-shadow: 1px 1px 1px #CCCCCC; }
+  .addScore-view h1 {
+    text-decoration: none;
+    font-size: 1.75em;
+    font-family: Roboto-bold;
+    color: #0d47a1;
+    text-shadow: 1px 1px 1px #CCCCCC; }
+  .addScore-view td {
+    text-decoration: none;
+    font-size: 1em;
+    font-family: Roboto-bold;
+    color: #0d47a1;
+    text-shadow: 1px 1px 1px #CCCCCC;
+    padding-left: 0.5em;
+    padding-right: 0.5em; }
+  .addScore-view div {
+    margin-bottom: 1em; }
+    .addScore-view div p {
+      margin-right: 0.5em; }
 
 .addSeason-view .submit-btn {
   margin-right: auto;
@@ -974,7 +975,6 @@ input {
   margin-top: 0.5em;
   margin-bottom: 0.5em;
   display: block;
-  background-color: #dee5e8;
   border-top: 0;
   border-left: 0;
   border-right: 0;
@@ -988,65 +988,61 @@ input {
   color: #0d47a1;
   text-shadow: 1px 1px 1px #CCCCCC; }
 
-.addTeam-view .submit-btn {
-  margin-top: 2em;
-  margin-right: auto;
-  margin-left: auto;
-  background-color: #9aca40;
-  font-size: 0.7em; }
+.addTeam-view {
+  margin-bottom: 3em; }
+  .addTeam-view .submit-btn {
+    margin-top: 2em;
+    margin-right: auto;
+    margin-left: auto;
+    background-color: #9aca40;
+    font-size: 0.7em; }
+  .addTeam-view .submit-btn:hover {
+    background-color: #85b231;
+    border-color: #85b231; }
+  .addTeam-view ul {
+    display: block;
+    list-style: none;
+    text-align: right;
+    margin-bottom: 1em; }
+  .addTeam-view li {
+    text-decoration: none;
+    font-size: 1.75em;
+    font-family: Roboto-bold;
+    color: #0d47a1;
+    text-shadow: 1px 1px 1px #CCCCCC; }
 
-.addTeam-view .submit-btn:hover {
-  background-color: #85b231;
-  border-color: #85b231; }
-
-.addTeam-view ul {
-  display: block;
-  list-style: none;
-  text-align: right;
-  margin-bottom: 1em; }
-
-.addTeam-view li {
-  text-decoration: none;
-  font-size: 1.75em;
-  font-family: Roboto-bold;
-  color: #0d47a1;
-  text-shadow: 1px 1px 1px #CCCCCC; }
-
-@media screen and (max-width: 50em) {
-  .changeTable-view {
-    max-width: 99%; } }
-
-.changeTable-view .submit-btn {
-  margin-right: auto;
-  margin-left: auto;
-  background-color: #9aca40; }
-
-.changeTable-view .submit-btn:hover {
-  background-color: #85b231;
-  border-color: #85b231; }
-
-.changeTable-view td {
-  text-decoration: none;
-  font-size: 1em;
-  font-family: Roboto-bold;
-  color: #0d47a1;
-  text-shadow: 1px 1px 1px #CCCCCC; }
-
-.changeTable-view table {
-  border: 1px solid #637283; }
+.changeTable-view {
+  margin-bottom: 3em; }
   @media screen and (max-width: 50em) {
-    .changeTable-view table {
+    .changeTable-view {
       max-width: 99%; } }
-
-.changeTable-view td {
-  text-decoration: none;
-  font-size: 1em;
-  font-family: Roboto-bold;
-  color: #0d47a1;
-  text-shadow: 1px 1px 1px #CCCCCC;
-  padding-left: 0.5em;
-  padding-right: 0.5em;
-  border: 1px solid #637283; }
+  .changeTable-view .submit-btn {
+    margin-right: auto;
+    margin-left: auto;
+    background-color: #9aca40; }
+  .changeTable-view .submit-btn:hover {
+    background-color: #85b231;
+    border-color: #85b231; }
+  .changeTable-view td {
+    text-decoration: none;
+    font-size: 1em;
+    font-family: Roboto-bold;
+    color: #0d47a1;
+    text-shadow: 1px 1px 1px #CCCCCC; }
+  .changeTable-view table {
+    border: 1px solid #637283; }
+    @media screen and (max-width: 50em) {
+      .changeTable-view table {
+        max-width: 99%; } }
+  .changeTable-view td {
+    text-decoration: none;
+    font-size: 1em;
+    font-family: Roboto-bold;
+    color: #0d47a1;
+    text-shadow: 1px 1px 1px #CCCCCC;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+    border: 1px solid #637283; }
 
 .admin-view .admin-nav {
   list-style: none;
@@ -1097,7 +1093,6 @@ input {
   margin-top: 0.5em;
   margin-bottom: 0.5em;
   display: block;
-  background-color: #dee5e8;
   border-top: 0;
   border-left: 0;
   border-right: 0;
@@ -1136,7 +1131,6 @@ input {
   margin-top: 0.5em;
   margin-bottom: 0.5em;
   display: block;
-  background-color: #dee5e8;
   border-top: 0;
   border-left: 0;
   border-right: 0;
@@ -1156,6 +1150,8 @@ input {
 
 .calendar-view {
   text-align: center; }
+  .calendar-view .calendar-content {
+    margin-bottom: 3em; }
   .calendar-view .radioSection input {
     margin-right: 0.5em; }
     @media screen and (max-width: 50em) {
@@ -1179,6 +1175,9 @@ input {
   font-family: Roboto-bold;
   color: #798ca7;
   text-shadow: 1px 1px 1px #CCCCCC; }
+  .contact-view .contact-content {
+    margin-bottom: 3em;
+    text-align: center; }
   .contact-view .submit-btn {
     margin-right: auto;
     margin-left: auto;
@@ -1192,12 +1191,13 @@ input {
     margin-top: 0.5em;
     margin-bottom: 0.5em;
     display: block;
-    background-color: #dee5e8;
     border-top: 0;
     border-left: 0;
     border-right: 0;
     border-bottom: 1;
-    border-bottom-color: #0d47a1; }
+    border-bottom-color: #0d47a1;
+    margin-right: auto;
+    margin-left: auto; }
   .contact-view p {
     text-decoration: none;
     font-size: 1.25em;
@@ -1205,6 +1205,7 @@ input {
     color: #798ca7;
     text-shadow: 1px 1px 1px #CCCCCC; }
   .contact-view img {
+    border: 2px solid #0d47a1;
     margin-top: 1em;
     margin-bottom: 4em; }
     @media screen and (max-width: 50em) {
@@ -1213,6 +1214,7 @@ input {
         max-height: 90%; } }
 
 .addAdmin-view {
+  margin-bottom: 3em;
   text-align: center; }
   .addAdmin-view .submit-btn {
     margin-right: auto;
@@ -1225,7 +1227,6 @@ input {
     margin-top: 0.5em;
     margin-bottom: 0.5em;
     display: block;
-    background-color: #dee5e8;
     border-top: 0;
     border-left: 0;
     border-right: 0;
