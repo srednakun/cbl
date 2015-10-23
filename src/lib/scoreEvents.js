@@ -48,7 +48,7 @@ scoreEventEmitter.on('addScoreToTeam', function(req, res) {
 
 scoreEventEmitter.on('updateWinner', function(winner, loser, req, res) {
   Season.update({seasonNumber: req.body.seasonNumber, 'teams.team': winner.id}, {$inc: {'teams.$.win': 1, 'teams.$.played': 1,
-  'teams.$.baskets.scored': winner.scored, 'teams.$.baskets.missed': winner.missed, 'teams.$.points': 2}}, function(err) {
+  'teams.$.baskets.scored': winner.scored, 'teams.$.baskets.allowed': winner.allowed, 'teams.$.points': 2}}, function(err) {
     if (err) return handleError.standard(err, res);
     scoreEventEmitter.emit('updateLoser', loser, req, res);
   });
@@ -56,7 +56,7 @@ scoreEventEmitter.on('updateWinner', function(winner, loser, req, res) {
 
 scoreEventEmitter.on('updateLoser', function(loser, req, res) {
   Season.update({seasonNumber: req.body.seasonNumber, 'teams.team': loser.id}, {$inc: {'teams.$.lost': 1, 'teams.$.played': 1,
-  'teams.$.baskets.scored': loser.scored, 'teams.$.baskets.missed': loser.missed, 'teams.$.points': 1}}, function(err) {
+  'teams.$.baskets.scored': loser.scored, 'teams.$.baskets.allowed': loser.allowed, 'teams.$.points': 1}}, function(err) {
     if (err) return handleError.standard(err, res);
     scoreEventEmitter.emit('magicPositionAlgorithm', req, res);
   });

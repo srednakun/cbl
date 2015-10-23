@@ -8,7 +8,7 @@ module.exports = function(app){
       method: 'POST',
       url: 'api/team/getteamsnotinseason/:season',
       data: {
-        'seasonNumber': 10,
+        'seasonNumber': $scope.currentSeason.seasonNumber,
         'inSeason': false
       }
     }).then(function(res){
