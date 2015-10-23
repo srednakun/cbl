@@ -99,6 +99,9 @@
 	ul {
 		@extend %flex-box;
 		justify-content: flex-start;
+		@media screen and (max-width: 1280px) {
+		justify-content: center;
+	}
 		
 		li {
 			display: inline;

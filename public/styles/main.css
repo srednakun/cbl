@@ -783,6 +783,11 @@ input {
   -webkit-justify-content: flex-start;
   -ms-flex-pack: start;
   justify-content: flex-start; }
+  @media screen and (max-width: 1280px) {
+    .rt-page-section ul {
+      -webkit-justify-content: center;
+      -ms-flex-pack: center;
+      justify-content: center; } }
   .rt-page-section ul li {
     display: inline; }
 
