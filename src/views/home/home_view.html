@@ -14,7 +14,7 @@
         <th>Diff</th>
         <th>Pts</th>
       </tr>
-      <tr data-ng-repeat="team in teams | filter: {division: 'A'} | orderBy: 'points'">
+      <tr data-ng-repeat="team in teams | filter: {division: 'A'} | orderBy: '-points'">
         <td>{{$index + 1}}</td>
         <td><img class="sport-icons" src="styles/fonts/sports-icons/dunk.svg">{{team.name}}</td>
         <td>{{team.played}}</td>
@@ -41,7 +41,7 @@
         <th>Diff</th>
         <th>Pts</th>
       </tr>
-      <tr data-ng-repeat="team in teams | filter: {division: 'B'} | orderBy: 'points'">
+      <tr data-ng-repeat="team in teams | filter: {division: 'B'} | orderBy: '-points'">
         <td>{{$index + 1}}</td>
         <td><img class="sport-icons" src="styles/fonts/sports-icons/dunk.svg">{{team.name}}</td>
         <td>{{team.played}}</td>

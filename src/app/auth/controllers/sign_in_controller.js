@@ -20,7 +20,7 @@ module.exports = function(app) {
         alertService.add('success-popup', 'You Successfully Loged In');
         $state.go('home');
       }, function(res) {
-        $scope.error = res.data.msg;
+        alertService.add('sorry-popup', res.data.msg);
         
       });
     };
