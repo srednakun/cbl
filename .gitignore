@@ -31,6 +31,6 @@ build
 
 
 # Compiled Public Directory
-public/js/
-public/styles/main.css
-public/html/views/
+#public/js/
+#public/styles/main.css
+#public/html/views/
