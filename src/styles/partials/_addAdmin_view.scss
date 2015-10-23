@@ -1,5 +1,7 @@
 .addAdmin-view{
   @extend %flex-form;
+  @extend %partials-default-form;
+  margin-bottom: 3em;
   text-align: center;
   .submit-btn{
       margin-right: auto;
@@ -17,7 +19,6 @@
       margin-top: 0.5em;
       margin-bottom: 0.5em;
       display: block;
-      background-color: $main-bk-color;
       border-top: 0;
       border-left: 0;
       border-right: 0;

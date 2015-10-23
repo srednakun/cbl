@@ -74,9 +74,11 @@
       <nav class="header-nav footer-nav">
         <ul>
           <li><a ui-sref="home">Home</a></li>
-          <li><a href="">Calendar</a></li>
-          <li><a href="">News</a></li>
-          <li><a href="">Contact</a></li>
+          <li><a ui-sref="calendar">Calendar</a></li>
+          <li><a ui-sref="news">News</a></li>
+          <li><a ui-sref="contact">Contact</a></li>
+          <li data-ng-if="isAdmin"><a ui-sref="admin">Admin</a></li>
+          <li data-ng-if="isLoggedIn"><a ui-sref="registerTeam">R.T.</a></li>
           <li data-ng-if="isAdmin"><a ui-sref="admin">Admin</a></li>
         </ul>
       </nav>

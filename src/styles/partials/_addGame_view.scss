@@ -1,5 +1,7 @@
 .addGame-view{
+  @extend %partials-default-form;
   @extend %flex-form;
+  margin-bottom: 3em;
   text-align: center;
   .radioSection{
     @extend %flex-box;
@@ -37,7 +39,6 @@
       margin-top: 0.5em;
       margin-bottom: 0.5em;
       display: inline;
-      background-color: $main-bk-color;
       border-top: 0;
       border-left: 0;
       border-right: 0;
