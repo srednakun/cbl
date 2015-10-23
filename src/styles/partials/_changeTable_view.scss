@@ -1,8 +1,5 @@
 .changeTable-view{
   @extend %flex-form;
-  @extend %partials-default-form;
-  margin-bottom: 3em;
-  
   @media screen and (max-width: 50em) {
         max-width: 99%;
   }
