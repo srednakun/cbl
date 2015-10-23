@@ -7,7 +7,7 @@ var handleError = require(__dirname + '/handleError');
 ee.on('verifyTeam', function(req, res, err){
   Team.findOne({_id:req.team1obj._id}, function(err, team1){
     Team.findOne({_id:req.team2obj._id}, function(err, team2){
-      if(team1 && team2) ee.emit('updateSeason', team1, team2, req, res, err); 
+      if(team1 && team2) ee.emit('updateSeason', team1, team2, req, res, err);
     });
   });
 });
@@ -19,10 +19,12 @@ ee.on('updateSeason', function(team1, team2, req, res, err){
   teamArray.push(t1, t2);
   var newGame = {
     date: req.body.date,
+    time: req.body.time,
     location: req.body.location,
     division: team1.division,
     teams: teamArray
   };
+
   Season.update({_id: req.body.seasonId},
   {$push:{games: newGame}},{upsert: true}, function(err){
     if(err) return handleError.standard(err, res);
@@ -48,7 +50,7 @@ ee.on('findGame', function(req,res,err){
           game.push(gamesA[i]);
       };
     });
-    return game;    
+    return game;
   }
 })
 
