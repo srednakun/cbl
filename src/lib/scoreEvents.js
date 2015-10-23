@@ -93,17 +93,8 @@ scoreEventEmitter.on('magicPositionAlgorithm', function(req, res) {
   //     }
   // }
 
-  // so we have sorted array
-  // [ { points: 5, name: 'Timberwolves' },
-  //   { points: 5, name: 'Lakers' },
-  //   { points: 5, name: 'ChicagoBulls' },
-  //   { points: 3, name: 'Cats' } ]
+  //DID NOT FINISHED MY MAGIC ALGORITHM YET!!!!!!!!!
 
-  //DID NOT FINISHED MY MAGIC ALGORITHM YET!!!!!!!!!
-  //DID NOT FINISHED MY MAGIC ALGORITHM YET!!!!!!!!!
-  //DID NOT FINISHED MY MAGIC ALGORITHM YET!!!!!!!!!
-  //DID NOT FINISHED MY MAGIC ALGORITHM YET!!!!!!!!!
-  //DID NOT FINISHED MY MAGIC ALGORITHM YET!!!!!!!!!
 
   res.json({msg:'Updated'});
   // });
