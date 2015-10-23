@@ -1,7 +1,9 @@
 .rt-page-section {
 	padding-left: 2em;
-	@media screen and (max-width: 1024px) {
-        padding-left: 0em;
+	@media screen and (max-width: 1280px) {
+        padding-left: 0;
+        @extend %flex-box;
+        justify-content: space-around;
     }
 }
 .rt-team {
@@ -56,9 +58,10 @@
 }
 
 .rt-team-section{
-	@media screen and (max-width: 1024px) {
-		width: 84%;
-		padding-left: 1.5em;
+	@media screen and (max-width: 1280px) {
+		width: em(350);
+		margin-bottom: 2em;
+		
 	}
 }
 
@@ -66,8 +69,10 @@
 .rt-player {
 	margin-bottom: 2em;
 	width: 58%;
-	@media screen and (max-width: 1024px) {
-		width: 84%;
+	@media screen and (max-width: 1280px) {
+		width: em(300);
+		padding-left: em(40);
+		padding-right: em(40);
 	}
 }
 .rt-lineup {
