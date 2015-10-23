@@ -5,39 +5,40 @@ module.exports = function(app) {
     $stateProvider
       .state('home', {
         url: '/',
-        templateUrl: '/html/views/home/home_view.html'
+        templateUrl: '/html/views/home/home_view.html',
+        controller: 'HomeController'
       })
       .state('admin', {
         url: '/admin',
         templateUrl: '/html/views/admin/admin_view.html'
       })
       .state('admin.addAdmin', {
-        url: '/admin/addAdmin',
+        url: '/addAdmin',
         templateUrl: '/html/views/admin/addAdmin/addAdmin_view.html',
         controller: 'AddAdminController'
       })
       .state('admin.addSeason', {
-        url: '/admin/addseason',
+        url: '/addseason',
         templateUrl: '/html/views/admin/addSeason/addSeason_view.html',
         controller: 'AddSeasonController'
       })
       .state('admin.addScore', {
-        url: '/admin/addscore',
+        url: '/addscore',
         templateUrl: '/html/views/admin/addScore/addScore_view.html',
         controller: 'AddScoreController'
       })
       .state('admin.addGame', {
-        url: '/admin/addgame',
+        url: '/addgame',
         templateUrl: '/html/views/admin/addGame/addGame_view.html',
         controller: 'AddGameController'
       })
       .state('admin.addTeam', {
-        url: '/admin/addTeam',
+        url: '/addTeam',
         templateUrl: '/html/views/admin/addTeam/addTeam_view.html',
         controller: 'AddTeamController'
       })
       .state('admin.changeTable', {
-        url: '/admin/changetable',
+        url: '/changetable',
         templateUrl: '/html/views/admin/changeTable/changeTable_view.html'
       })
       .state('signin', {
