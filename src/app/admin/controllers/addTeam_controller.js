@@ -29,7 +29,7 @@ module.exports = function(app){
       }
     }).then(function(res){
       $scope.changeInSeason(team);
-       alertService.add('success', 'You Added Team To Season');
+       alertService.add('success-popup', 'You Added Team To Season');
     }, function(res){
       console.log('AddTeamController add2season error ' + res);
     });

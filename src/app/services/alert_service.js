@@ -4,6 +4,7 @@ module.exports = function(app) {
     var alertService = {};
     $rootScope.alerts = {};
 
+    //success-popup or sorry-popup
     alertService.add = function(type, msg) {
       $rootScope.alerts.type = type;
       $rootScope.alerts.msg = msg;

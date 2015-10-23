@@ -1,7 +1,7 @@
 module.exports = function(app) {
   
   app.controller('RegisterTeamController', ['$scope', '$http', '$cookies', 'alertService', 'busy', function($scope, $http, $cookies, alertService, busy) {
-    
+    busy.start();
     $scope.team = {};
     $scope.team.creator = $scope.loggedUser;
     $scope.teams = {};
@@ -27,6 +27,7 @@ module.exports = function(app) {
             $scope.teams[team._id] = team;
           });
         }
+        busy.stop();
       }, function(res) {
         console.log(res);
       });
@@ -40,7 +41,7 @@ module.exports = function(app) {
       }).then(function(res) {
         $scope.teams[res.data._id] = res.data;
         $scope.clearTeamForm();
-        alertService.add('success', 'You Added The Team');
+        alertService.add('success-popup', 'You Added The Team');
       }, function(res) {
         console.log(res);
       });
@@ -109,7 +110,7 @@ module.exports = function(app) {
         }).then(function(res) {
           $scope.teamFormatting = false;
           $scope.clearTeamForm();
-          alertService.add('success', 'You Updated The Team');
+          alertService.add('success-popup', 'You Updated The Team');
         }, function(res) {
           console.log(res);
         });
@@ -129,7 +130,7 @@ module.exports = function(app) {
         }).then(function(res) {
           $scope.playerFormatting = false;
           $scope.player = {};
-          alertService.add('success', 'You Updated The Player');
+          alertService.add('success-popup', 'You Updated The Player');
         }, function(res) {
           console.log(res);
         });

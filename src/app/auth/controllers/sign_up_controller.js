@@ -11,6 +11,7 @@ module.exports = function(app) {
           $cookies.put('role', res.data.role);
           $cookies.put('email', $scope.user.email);
           $scope.loggedIn();
+          alertService.add('success-popup', 'You Are Registered And Logged In');
           $state.go('home');
         }, function(res) {
           console.log(res);
