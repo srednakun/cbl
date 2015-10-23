@@ -24,7 +24,7 @@
     </div>
     <div>
       <p>Game Time: </p>
-      <input type="time" name="gametime" data-ng-model="data.time | date : HH:mm : '+0200'">
+        <input type="number" min="01" max="23" data-ng-model="data.time.hours">:<input type="number" min="00" max="59" data-ng-model="data.time.minutes">
     </div>
     <div>
       <p>Game Location: </p>

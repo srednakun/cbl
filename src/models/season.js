@@ -28,7 +28,10 @@ var seasonSchema = new mongoose.Schema({
       score: {type: Number, default: 0}
     }],
     date: Date,
-    time: String,
+    time: {
+      hours: String,
+      minutes: String
+    },
     location: String,
     division: String
   }]
