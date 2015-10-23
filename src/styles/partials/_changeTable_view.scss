@@ -1,5 +1,8 @@
 .changeTable-view{
   @extend %flex-form;
+  @extend %partials-default-form;
+  margin-bottom: 3em;
+  
   @media screen and (max-width: 50em) {
         max-width: 99%;
   }
@@ -27,7 +30,7 @@
       @media screen and (max-width: 50em) {
         max-width: 99%;
       }
-    	border: 1px solid $drk-head-color;
+      border: 1px solid $drk-head-color;
     }
 
     td{

@@ -1,6 +1,8 @@
 .addTeam-view{
   @extend %flex-form;
-
+  @extend %partials-default-form;
+  margin-bottom: 3em;
+  
   .submit-btn{
       margin-top: 2em;
       margin-right: auto;
@@ -29,8 +31,4 @@
       color: $btn-color;
       text-shadow: 1px 1px 1px #CCCCCC;
     }
-
-  @media screen and (max-width: 50em) {
-
-  }
 }
