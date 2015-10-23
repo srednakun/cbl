@@ -10,12 +10,12 @@ module.exports.userExists = function(err, res) {
 
 module.exports.userDoesNotExists = function(err, res) {
   console.log(err);
-  res.status(401).json({msg: 'user does not exists'});
+  res.status(401).json({msg: 'User Does Not Exists'});
 };
 
 module.exports.userPassMatch = function(err, res) {
   console.log(err);
-  res.status(401).json({msg: 'password does not matchs'});
+  res.status(401).json({msg: 'Password Does Not Matchs'});
 };
 
 module.exports.noAuthenticate = function(err, res) {
