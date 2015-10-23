@@ -4,7 +4,8 @@ module.exports = function(app){
   $scope.divATeams = [];
   $scope.divBTeams = [];
   $scope.currentTeams = $scope.divATeams;
-  $scope.data = {};
+  $scope.game = {};
+  $scope.game.seasonId = $scope.currentSeason._id;
   $scope.division = { name: 'A' };
   $http.defaults.headers.common.token = $cookies.get('token');
 
@@ -18,7 +19,6 @@ module.exports = function(app){
         url: 'api/season/getwholeseason'
       }).then(function(res){
          $scope.season = res.data;
-         $scope.data.seasonId = res.data._id;
          $scope.populateTeams();
       }, function(res){
         console.log('AddGameController getSeason error ' + res);
@@ -39,9 +39,10 @@ module.exports = function(app){
     $http({
         method: 'POST',
         url: 'api/game/addgame',
-        data: $scope.data
+        data: $scope.game
       }).then(function(res){
-        $scope.data = {};
+        $scope.game = {};
+        $scope.game.seasonId = $scope.currentSeason._id;
         alertService.add('success-popup', 'You Added The Game');
       }, function(res){
         console.log('AddGameController addGame error ' + res);
