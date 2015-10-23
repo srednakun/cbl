@@ -42,7 +42,7 @@ module.exports = function(app){
           // removes addScore game from scoreArray (Array of games with no score)
           $scope.scoreArray.splice($scope.scoreArray.indexOf(game), 1);
           $scope.data = {};
-          alertService.add('success', 'You Added Score To Game');
+          alertService.add('success-popup', 'You Added Score To Game');
         }, function(res){
           console.log('AddScoreController addScore error ' + res);
       });

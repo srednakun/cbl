@@ -42,7 +42,7 @@ module.exports = function(app){
         data: $scope.data
       }).then(function(res){
         $scope.data = {};
-        alertService.add('success', 'You Added The Game');
+        alertService.add('success-popup', 'You Added The Game');
       }, function(res){
         console.log('AddGameController addGame error ' + res);
     });

@@ -32,7 +32,7 @@ module.exports = function(app){
          console.log(res);
          $scope.season = {};
          $scope.changeCurrentSeason();
-         alertService.add('success', 'You Added The Season');
+         alertService.add('success-popup', 'You Added The Season');
       }, function(res){
         console.log('AddSeasonController create error ' + res);
       });
