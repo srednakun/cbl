@@ -1,3 +1,31 @@
-@media screen and (max-width: 50em) {
+.calendar-view{
+  @extend %flex-form;
+  text-align: center;
+  .radioSection{
+    @extend %flex-box;
+  	input{
+      margin-right: 0.5em;
+      @media screen and (max-width: 50em) {
+        margin: 0em;
+      }
+    }
+    p{
+  	  margin-right: 1em;
+      @media screen and (max-width: 50em) {
+        margin: 0em;
+      }
+  	}
+  }
 
+    p{
+      text-decoration: none;
+      font-size: 1.75em;
+      font-family: Roboto-bold;
+      color: $btn-color;
+      text-shadow: 1px 1px 1px #CCCCCC;
+    }
+
+    div{
+      margin-top: 2em;
+    }
 }
