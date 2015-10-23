@@ -9,7 +9,10 @@
     <link rel="stylesheet" href="/styles/main.css">
   </head>
   <body>
-    <div class="blue-button" data-ng-if="alerts.exists">{{alerts.msg}}</div>
+    <div class="success-popup alert-button alert-msg">Success! Your request went through</div>
+    <div class="sorry-popup alert-button alert-msg">Sorry! Your request didn't go through</div>
+    <img class="busy-icon alert-msg" src="styles/fonts/squares.svg">
+    <div data-ng-if="alerts.exists" data-ng-class="alerts.type">{{alerts.msg}}</div>
     <div data-ng-if="busy">Please Put something here</div>
     <header>
       <section class="header-section">

@@ -1,13 +1,25 @@
 .alert-msg {
-	position: absolute;
+    position: fixed;
     top: 50%;
     left: 50%;
-    width: 15em;
-    height: 5em;
-    margin-top: -40px;
-    margin-left: -40px;
-    background-color: $highlight;
-    border: 1px solid $highlight;
-    color: white;
-    border-radius: em(25);
+    transform: translate(-50%, -50%);
 }
+
+.alert-button {
+
+    padding-left: 5em; 
+    padding-right: 5em;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+}
+.sorry-popup {
+    @extend %main-button;
+    background-color: #DB2929;
+    border: .5em solid #DB2929;
+}
+.success-popup {
+    @extend %main-button;
+    background-color: $highlight;
+    border: .5em solid $highlight;
+}
+   
