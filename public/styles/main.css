@@ -10,7 +10,7 @@
   font-family: Roboto-bold;
   src: url(fonts/fonts-roboto/Roboto-Bold.ttf); }
 
-.home-button, .log-out-button, .header-section, .logo-header, .standings-container, .rt-team, .rt-box2, .rt-player, .rt-team-section, .rt-page-section ul, .social-footer-section, .addGame-view .radioSection, .addScore-view div, .calendar-view .radioSection {
+.home-button, .log-out-button, .header-section, .logo-header, .standings-container, .rt-page-section, .rt-team, .rt-box2, .rt-player, .rt-team-section, .rt-page-section ul, .social-footer-section, .addGame-view .radioSection, .addScore-view div, .calendar-view .radioSection {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
@@ -691,18 +691,19 @@ header {
     margin-bottom: 2em;
     width: 20em; }
   .standings-only-table td:nth-child(3), .standings-only-table th:nth-child(3),
-  .standings-only-table td:nth-child(4), .standings-only-table th:nth-child(4),
-  .standings-only-table td:nth-child(7), .standings-only-table th:nth-child(7),
-  .standings-only-table td:nth-child(8), .standings-only-table th:nth-child(8),
-  .standings-only-table td:nth-child(9), .standings-only-table th:nth-child(9),
-  .standings-only-table td:nth-child(10), .standings-only-table th:nth-child(10) {
+  .standings-only-table td:nth-child(5), .standings-only-table th:nth-child(5),
+  .standings-only-table td:nth-child(6), .standings-only-table th:nth-child(6),
+  .standings-only-table td:nth-child(7), .standings-only-table th:nth-child(7) {
     display: none; } }
 
 .rt-page-section {
   padding-left: 2em; }
-  @media screen and (max-width: 1024px) {
+  @media screen and (max-width: 1280px) {
     .rt-page-section {
-      padding-left: 0em; } }
+      padding-left: 0;
+      -webkit-justify-content: space-around;
+      -ms-flex-pack: distribute;
+      justify-content: space-around; } }
 
 input {
   margin-top: 0.5em;
@@ -748,17 +749,19 @@ input {
   border: 0.125em solid #42a5f5;
   border-radius: 1.5625em; }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1280px) {
   .rt-team-section {
-    width: 84%;
-    padding-left: 1.5em; } }
+    width: 21.875em;
+    margin-bottom: 2em; } }
 
 .rt-player {
   margin-bottom: 2em;
   width: 58%; }
-  @media screen and (max-width: 1024px) {
+  @media screen and (max-width: 1280px) {
     .rt-player {
-      width: 84%; } }
+      width: 18.75em;
+      padding-left: 2.5em;
+      padding-right: 2.5em; } }
 
 .rt-lineup {
   background-color: white;
@@ -780,6 +783,11 @@ input {
   -webkit-justify-content: flex-start;
   -ms-flex-pack: start;
   justify-content: flex-start; }
+  @media screen and (max-width: 1280px) {
+    .rt-page-section ul {
+      -webkit-justify-content: center;
+      -ms-flex-pack: center;
+      justify-content: center; } }
   .rt-page-section ul li {
     display: inline; }
 
@@ -868,11 +876,13 @@ input {
 
 .sorry-popup {
   background-color: #DB2929;
-  border: .5em solid #DB2929; }
+  border: .5em solid #DB2929;
+  z-index: 50; }
 
 .success-popup {
   background-color: #9aca40;
-  border: 0.5em solid #9aca40; }
+  border: 0.5em solid #9aca40;
+  z-index: 50; }
 
 .addGame-view {
   margin-bottom: 3em;

@@ -16,10 +16,12 @@
     @extend %main-button;
     background-color: #DB2929;
     border: .5em solid #DB2929;
+    z-index: 50;
 }
 .success-popup {
     @extend %main-button;
     background-color: $highlight;
     border: .5em solid $highlight;
+    z-index: 50;
 }
    
