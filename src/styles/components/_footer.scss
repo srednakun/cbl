@@ -21,9 +21,8 @@
 	display: inline-block;
 }
 
-.links_media_item img:hover { //remove this section to fix issue of footer twitching
-	border: 3px solid $btn-hover-light; 
-	border-radius: 10px;
+.links_media_item img:hover {
+
 }
 
 .social-img {
@@ -64,6 +63,10 @@
 .social-footer-section {
 	padding-top: 1em;
 	padding-bottom: .5em;
+}
+
+.social-img:hover{
+	opacity: 0.4;
 }
 
 
