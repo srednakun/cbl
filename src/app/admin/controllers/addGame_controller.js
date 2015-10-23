@@ -1,6 +1,7 @@
 module.exports = function(app){
-  app.controller('AddGameController', ['$scope', '$http', '$cookies', 'alertService', function($scope, $http, $cookies, alertService){
+  app.controller('AddGameController', ['$scope', '$http', '$cookies', 'alertService', 'busy', function($scope, $http, $cookies, alertService, busy){
 
+  busy.start();
   $scope.divATeams = [];
   $scope.divBTeams = [];
   $scope.currentTeams = $scope.divATeams;
@@ -22,6 +23,7 @@ module.exports = function(app){
          $scope.populateTeams();
       }, function(res){
         console.log('AddGameController getSeason error ' + res);
+        busy.stop();
     });
   }();
 
@@ -33,6 +35,7 @@ module.exports = function(app){
         $scope.divBTeams.push({name:team.name, _id: team.team});
       }
     });
+    busy.stop();
   };
 
   $scope.addGame = function(){
