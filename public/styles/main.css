@@ -734,15 +734,16 @@ input {
 .rt-header {
   padding: 0;
   margin-top: 0;
-  font-size: 2.25em;
+  font-size: 1em;
   font-family: Roboto-bold; }
 
 .rt-body {
   color: #1e1e1e;
-  margin-top: 1.5em; }
+  margin-top: 1em; }
 
 .rt-subheader {
-  font-family: Roboto-bold; }
+  font-family: Roboto-bold;
+  font-size: 0.875em; }
 
 .rt-team-section, .rt-player {
   background-color: white;
@@ -750,7 +751,7 @@ input {
   border: 0.125em solid #42a5f5;
   border-radius: 1.5625em; }
 
-@media screen and (max-width: 1280px) {
+@media screen and (max-width: 1200px) {
   .rt-team-section {
     width: 21.875em;
     margin-bottom: 2em; } }
@@ -758,7 +759,7 @@ input {
 .rt-player {
   margin-bottom: 2em;
   width: 58%; }
-  @media screen and (max-width: 1280px) {
+  @media screen and (max-width: 1200px) {
     .rt-player {
       width: 18.75em;
       padding-left: 2.5em;
@@ -768,13 +769,13 @@ input {
   background-color: white;
   border: 0.125em solid #42a5f5;
   border-radius: 1.5625em;
-  padding: 3em 3em 3em 3em;
+  padding: 2em;
   min-width: 15em;
   display: inline;
   margin-bottom: 2em;
   margin-right: 2em; }
   .rt-lineup label {
-    font-size: 1.5em;
+    font-size: 1em;
     font-family: Roboto-bold; }
   .rt-lineup img {
     padding-left: 1em;

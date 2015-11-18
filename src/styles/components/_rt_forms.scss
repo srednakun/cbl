@@ -36,18 +36,26 @@
 	justify-content: flex-start;
 	margin-top: 2em;
 }
+.rt-team-section {
+	//width: em(600);
+}
+.rt-player {
+	//width: em(600);
+}
 .rt-header {
 	padding: 0;
 	margin-top: 0;
-	font-size: em(36);
+	font-size: em(16);
 	font-family: Roboto-bold;
 }
 .rt-body {
 	color: $darkest-color;
-	margin-top: 1.5em;
+	margin-top: 1em;
+
 }
 .rt-subheader {
 	font-family: Roboto-bold;
+	font-size: em(14);
 }
 
 .rt-team-section, .rt-player {
@@ -58,7 +66,7 @@
 }
 
 .rt-team-section{
-	@media screen and (max-width: 1280px) {
+	@media screen and (max-width: 1200px) {
 		width: em(350);
 		margin-bottom: 2em;
 		
@@ -69,7 +77,7 @@
 .rt-player {
 	margin-bottom: 2em;
 	width: 58%;
-	@media screen and (max-width: 1280px) {
+	@media screen and (max-width: 1200px) {
 		width: em(300);
 		padding-left: em(40);
 		padding-right: em(40);
@@ -79,14 +87,14 @@
 	background-color: white;
 	border: em(2) solid $btn-hover-light;
 	border-radius: em(25);
-	padding: 3em 3em 3em 3em;
+	padding: 2em;
 	min-width: 15em;
 	display: inline;
 	margin-bottom: 2em;
 	margin-right: 2em;
 
 	label {
-		font-size: em(24);
+		font-size: em(16);
 		font-family: Roboto-bold;
 	}
 		img {
