@@ -9,12 +9,12 @@
 	opacity: .8;
 	box-shadow: 10px 10px 5px #888888;
 	margin: 0;
-	width: 40em;
+	width: 30em;
 	border: 1px solid $light-font-color;
 	h1 {
 		color: $darkest-color;
 		margin: 0;
-		font-size: em(36);
+		font-size: em(24);
 		margin: 0;
 		padding-left: .4em;
 		font-family: Roboto-bold;
@@ -35,6 +35,7 @@
    vertical-align:middle;
    padding-top: .5em;
    padding-bottom: .5em;
+   font-size: em(14);
 
 }
 .standings-only-table th {
