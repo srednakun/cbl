@@ -6,6 +6,7 @@
 		a {
 			color: $highlight;
 			margin-right: 1em;
+			font-size: em(12);
 		}
 	}
 }
@@ -32,12 +33,14 @@
 .contact_info a {
 	text-decoration: none;
 	color: $darkest-color;
-		white-space: nowrap;
+	white-space: nowrap;
+	font-size: em(12);
 }
 .contact_info p {
 	color: $darkest-color;
 	font-family: Roboto-bold;
 	white-space: nowrap;
+	font-size: em(12);
 }
 .social-footer-section {
 	@extend %flex-box;
@@ -56,6 +59,7 @@
 
 .footer-nav li {
 	margin-left: 1em;
+	font-size: em(12);
 }
 .contact-info {
 	color: $primary-font-color;

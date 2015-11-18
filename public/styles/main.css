@@ -811,7 +811,8 @@ input {
     display: inline-block; }
     .social-nav ul li a {
       color: #9aca40;
-      margin-right: 1em; }
+      margin-right: 1em;
+      font-size: 0.75em; }
 
 .social-text {
   display: inline; }
@@ -827,12 +828,14 @@ input {
 .contact_info a {
   text-decoration: none;
   color: #1e1e1e;
-  white-space: nowrap; }
+  white-space: nowrap;
+  font-size: 0.75em; }
 
 .contact_info p {
   color: #1e1e1e;
   font-family: Roboto-bold;
-  white-space: nowrap; }
+  white-space: nowrap;
+  font-size: 0.75em; }
 
 .social-footer-section {
   -webkit-align-items: center;
@@ -850,7 +853,8 @@ input {
     color: #798ca7; }
 
 .footer-nav li {
-  margin-left: 1em; }
+  margin-left: 1em;
+  font-size: 0.75em; }
 
 .contact-info {
   color: #798ca7; }
